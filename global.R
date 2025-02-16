@@ -14,7 +14,11 @@ library(shinycssloaders)
 library(data.table)
 library(DT)
 library(dplyr)
-
+library(dtplyr)
+library(glue)
+library(bslib)
+library(leaflet)
+library(bit64)
 #STATIC GLOBAL DATA (DOESN´T CHANGES OVER TIME) 
 source("./functions/etl-pipelines.R")
 

@@ -10,7 +10,7 @@ get_pol_animals_ocurrence <-
     pathDataset <- "./data/0000263-250212154643175/occurrence.txt"
     pathColumns <- "./data/columns_selection.csv"
     
-    dfSps <- read.delim(pathDataset, sep = "\t", header = T)
+    dfSps <- fread(pathDataset, sep = "\t")
     dfCol <- read.csv(pathColumns)
     
     #dfSps <-  dfSps %>% select(where(~any(!is.na(.)))) ###Was Used to filter valid Cols and then selected manually the needed cols
@@ -18,12 +18,16 @@ get_pol_animals_ocurrence <-
     r <- 
       dfSps %>%
         select(dfCol[,1]) %>%
-        mutate(across(everything(), ~ replace(., is.null(.) | . == "", NA))) %>%
+        mutate(across(where(~ !inherits(., "POSIXt")), ~ replace(., is.null(.) | . == "", NA))) %>%
         mutate(
           id = gbifID,
-          gbifID = '<a href="{occurrenceID}" target="_blank">{gbifID}</a>' %>% glue()
+          gbifID = '<a href="{occurrenceID}" target="_blank">{gbifID}</a>' %>% glue(),
+          eventDatetime = lubridate::ymd_hm(paste(eventDate, eventTime)),
+          taxonomy = "{kingdom} >> {class} >> {order} >> {family}" %>% glue(),
+          location = "{level0Name} >> {stateProvince} >> {locality}" %>% glue()
         ) %>%
-        select(-occurrenceID)
+      relocate(eventDatetime, .before = eventDate) %>%
+      select(-c(occurrenceID, eventDate, eventTime))
     
     return(r)
   }
