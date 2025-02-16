@@ -19,8 +19,10 @@ library(glue)
 library(bslib)
 library(leaflet)
 library(bit64)
-#STATIC GLOBAL DATA (DOESN´T CHANGES OVER TIME) 
-source("./functions/etl-pipelines.R")
+library(plotly)
+
+#STATIC GLOBAL DATA (DOESN´T CHANGE OVER TIME) 
+source("./R/etl/etl-pipelines.R")
 
 dfAnimalPoland <- get_pol_animals_ocurrence()
 dfSpeciesPolandImg <- get_pol_species_ocurrence_img()
