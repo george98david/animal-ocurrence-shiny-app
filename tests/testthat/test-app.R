@@ -16,8 +16,6 @@ test_that("Application loads correctly", {
 # Test that the species filter works correctly
 test_that("Species filter works correctly", {
   app <- AppDriver$new()
-  
-  # Select a value from the species pickerInput
   app$set_inputs(filter1 = "SELECT ALL")
   Sys.sleep(1)
   expect_true(nrow(app$get_value("outDtAnimalPoland")) > 0)

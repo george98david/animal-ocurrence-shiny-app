@@ -3,7 +3,7 @@
 An interactive application for visualizing observed species on a map using data from the Global Biodiversity Information Facility (GBIF).
 
 ## 📖 Description
-This application provides a comprehensive view of species occurrences based on biodiversity data from GBIF. Users can explore the distribution of observed species through an interactive map and analyze trends over time. The dataset can be downloaded from the official GBIF website, ensuring up-to-date and reliable information. Additionally, a timeline graph is generated to display the number of individuals observed per day, offering insights into biodiversity patterns.
+This application provides a comprehensive view of species occurrences based on biodiversity data from GBIF. Users can explore the distribution of observed species through an interactive map and analyze trends over time. The dataset can be downloaded from the official GBIF website https://www.gbif.org/occurrence/search?dataset_key=8a863029-f435-446a-821e-275f4f641165, ensuring up-to-date and reliable information. Additionally, a timeline graph is generated to display the number of individuals observed per day, offering insights into biodiversity patterns.
 
 ## 🚀 Features
 - Interactive species occurrence map, powered by leaflet visual package.
@@ -35,7 +35,7 @@ This application provides a comprehensive view of species occurrences based on b
    ```
 
 ## 📡 Deployment
-You can find a preview on this link:
+You can find a preview on this link: https://n8htln-david-basualdo.shinyapps.io/animal-ocurrence-shiny-app/
 
 ## 🛠 Workflows and GitHub Actions
 This project includes automated unit tests that run on each push to the repository. The tests ensure that core functionalities of the Shiny app work correctly. The following tests are implemented:

@@ -22,7 +22,7 @@ library(bit64)
 library(plotly)
 
 #STATIC GLOBAL DATA (DOESN´T CHANGE OVER TIME) 
-source("./R/etl/etl-pipelines.R")
+source("R/etl/etl-pipelines.R")
 
 dfAnimalPoland <- get_pol_animals_ocurrence()
 dfSpeciesPolandImg <- get_pol_species_ocurrence_img()

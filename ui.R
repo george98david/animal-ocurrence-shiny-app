@@ -1,7 +1,7 @@
-source("./ui-Components/header.R")
-source("./ui-Components/body.R")
-source("./ui-Components/sidebar.R")
-source("./ui-Components/controlbar.R")
+source("ui-components/header.R")
+source("ui-components/body.R")
+source("ui-components/sidebar.R")
+source("ui-components/controlbar.R")
 
 ui <- 
   dashboardPage(

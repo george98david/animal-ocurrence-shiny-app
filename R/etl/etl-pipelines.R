@@ -7,8 +7,8 @@
 
 get_pol_animals_ocurrence <- 
   function(){
-    pathDataset <- "./data/0000263-250212154643175/occurrence.txt"
-    pathColumns <- "./data/columns_selection.csv"
+    pathDataset <- "data/0000263-250212154643175/occurrence.txt"
+    pathColumns <- "data/columns_selection.csv"
     
     dfSps <- fread(pathDataset, sep = "\t")
     dfCol <- read.csv(pathColumns)
@@ -34,7 +34,7 @@ get_pol_animals_ocurrence <-
 
 get_pol_species_ocurrence_img <-
   function(){
-    pathDataset <- "./data/0000263-250212154643175/multimedia.txt"
+    pathDataset <- "data/0000263-250212154643175/multimedia.txt"
     dfSps <- read.delim(pathDataset, sep = "\t", header = T)
     
     r <- 

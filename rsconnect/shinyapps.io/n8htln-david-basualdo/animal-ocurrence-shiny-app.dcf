@@ -1,0 +1,12 @@
+name: animal-ocurrence-shiny-app
+title: animal-ocurrence-shiny-app
+username: n8htln-david-basualdo
+account: n8htln-david-basualdo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14016803
+bundleId: 9810905
+url: https://n8htln-david-basualdo.shinyapps.io/animal-ocurrence-shiny-app/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
